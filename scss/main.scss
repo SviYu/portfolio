@@ -1,0 +1,25 @@
+@import 'base';
+@import 'navbar';
+@import 'header';
+@import 'about';
+@import 'experience';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+@import 'preloader';
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* width: 1920px; */
+    margin: 0 auto;
+    background-color: color(primary);
+    position: relative;
+}

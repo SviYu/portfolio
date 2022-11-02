@@ -1,0 +1,174 @@
+.header {
+    height: 100vh;
+    background: linear-gradient(315deg,
+            rgba(color(primary), 0.8) 0%,
+            rgba(color(secondary), 0.5) 100%), url(../img/header-bg.jpg) center no-repeat;
+    background-size:cover;
+    color: color(white);
+    position: relative;
+    
+    &-text {
+       position: absolute;
+       bottom: 15rem;
+       right: 5rem;
+        @include response(xs){
+            right: 3rem;
+        }
+
+        &-title {
+            font-size: size(xl) + 1;
+            font-family: $font-handlee;
+            text-align: right;
+            font-weight: 200;
+            user-select: none;
+            position: relative;
+            @include response(sm) {
+                font-size: size(xl)
+            }
+            @include response(xs) {
+                font-size: size(lg)
+            }
+        }
+
+        &-name {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: size(xl) + 8;
+            font-family: $font-baskerville;
+            letter-spacing: .8rem;
+            color: transparent;
+            text-transform: uppercase;
+            &:hover span:nth-child(1) {
+                    transform: translateY(-1rem);
+                }
+            &:hover span:nth-child(2) {
+                transform: translateY(1rem);
+            }
+            &:hover span:nth-child(3) {
+               opacity: 1;
+               transition: opacity .7s ease;
+            }
+            & span:nth-child(1),
+            & span:nth-child(2) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: color(white);
+                transition: 0.5s;
+                overflow: hidden;
+            }
+            & span:nth-child(1) {
+                clip-path: polygon(0 0, 100% 0%, 100% 50%, 0 50%);
+            }
+            & span:nth-child(2) {
+                clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+            }
+            & span:nth-child(3) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-family: $font-handlee;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 350ms ease;
+                font-size: size(lg);
+                color: #fff;
+                background: color(pink);
+                width: 97.5%;
+                padding-left: 5px;
+                text-align: center;
+                letter-spacing: 0.5rem;
+                word-spacing: 1rem;
+                line-height: 120%;
+                @include response(md) {
+                    font-size: size(md);
+                }
+                @include response(xs) {
+                    font-size: size(xs) - .4;
+                }
+            }
+          
+            @include response(md) {
+                font-size: size(xl) + 6;
+                letter-spacing: 0.3rem;
+                margin-top: -1.5rem;
+            }
+            @include response(sm) {
+                font-size: size(xl) + 5;
+                letter-spacing: 0.3rem;
+                margin-top: -1.5rem;
+            }
+            @include response(xs) {
+                font-size: size(xl) + 2;
+            } 
+
+        }
+    }
+}
+
+
+.main-links {
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    list-style-type: none;
+    display: flex;
+    @include response(xs) {
+        right: 3rem;
+        }
+
+    
+    &-item {
+        &-link {
+            font-size: size(xl);
+            margin-left: 10rem;
+            color: color(white);
+            transition: all .3s;
+            @include response(sm) {
+                margin-left: 8rem;
+            }
+            @include response(xs) {
+                margin-left:4rem;
+            }
+
+            &:hover {
+                color: color(pink);
+                /* text-shadow: .2rem .2rem color(pink); */
+            }
+        }
+    }
+}
+/* Mobile Menu */
+.burger-menu-mobile{
+    display: none;
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(color(primary), .95);
+    position: fixed;
+    z-index: 10;
+}
+.mobile-list{
+    list-style: none;
+    margin-top: 5rem;
+
+    &-item{
+        text-align: center;
+
+        &-link{
+            text-decoration: none;
+            color: color(white);
+            font-family: $font-handlee;
+            font-size: size(xl) + 1;
+            line-height: 2;
+            transition: all .2s;
+            
+            &:active{
+               color: color(pink);
+            }
+        }
+    }
+}
