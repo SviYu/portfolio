@@ -1,15 +1,15 @@
-$font-openSans: 'Open Sans', sans-serif;;
+ $font-openSans: 'Open Sans', sans-serif;;
 $font-handlee: 'Handlee', cursive;
 $font-baskerville: 'Baskervville', serif;
 
 
 
 $colors: (
-    primary: #192231,
-    secondary: #494E6B,
-    pink: #FFA5BC,
-    darkpink: #800080,
-    white: #fff
+    primary: #181818,
+    secondary: #393E46,
+    pink: #00ADB5,
+    darkpink: #022731,
+    white: #EEEEEE
 ); 
 @function color($color-name){
     @return map-get($colors, $color-name)

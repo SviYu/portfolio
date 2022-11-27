@@ -27,6 +27,12 @@
                     width: 40rem;
                     height: 50rem;
                     object-fit:cover;
+                    filter: grayscale(50%);
+                    transition: all .5s;
+
+                    &:hover{
+                        filter: none;
+                    }
 
                     @include response(xl){
                         width: 30rem;
@@ -142,17 +148,17 @@
         transform: scale(0.9) translateZ(0);
         filter: blur(10px);
         background: linear-gradient(to left,
-                #ff5770,
-                #e4428d,
-                #c42da8,
-                #9e16c3,
-                #6501de,
-                #9e16c3,
-                #c42da8,
-                #e4428d,
-                #ff5770);
+                #31f48e,
+                #07aa7b,
+                #0bbeff,
+                #0086ff,
+                #01437d,
+                #0086ff,
+                #0bbeff,
+                #07aa7b,
+                #31f48e);
         background-size: 200% 200%;
-        animation: animateGlow 1.25s linear infinite;
+        animation: animateGlow 2.25s linear infinite;
     }
 
     &:hover {
