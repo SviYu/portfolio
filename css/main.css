@@ -521,7 +521,11 @@
 /* End of glowing button */
 .experience {
   color: #EEEEEE;
-  padding: 12rem 7rem 0;
+  padding: 12rem 7rem;
+  padding-bottom: 10rem;
+  margin-top: 4rem;
+  position: relative;
+  background-color: rgba(57, 62, 70, 0.3);
 }
 @media (max-width: 980px) {
   .experience {
@@ -534,6 +538,49 @@
   }
 }
 
+/* SECTION DIVIDER */
+.custom-shape-divider-top-1669579363 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1669579363 svg {
+  position: relative;
+  display: block;
+  width: calc(123% + 1.3px);
+  height: 107px;
+}
+
+.custom-shape-divider-top-1669579363 .shape-fill {
+  fill: #181818;
+}
+
+.custom-shape-divider-bottom-1669580180 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1669580180 svg {
+  position: relative;
+  display: block;
+  width: calc(184% + 1.3px);
+  height: 73px;
+}
+
+.custom-shape-divider-bottom-1669580180 .shape-fill {
+  fill: #181818;
+}
+
+/* EXPERIENCE */
 .exp {
   display: flex;
   align-items: flex-start;
@@ -660,30 +707,14 @@
   visibility: visible;
 }
 
+/* SKILLS */
 .skills {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  width: 80%;
+  margin: 10rem auto 0;
 }
 @media (max-width: 550px) {
   .skills {
     flex-direction: column;
-  }
-}
-.skills-left {
-  width: 45%;
-}
-@media (max-width: 550px) {
-  .skills-left {
-    width: 100%;
-  }
-}
-.skills-right {
-  width: 45%;
-}
-@media (max-width: 550px) {
-  .skills-right {
-    width: 100%;
   }
 }
 .skills-title {
@@ -701,43 +732,6 @@
   width: 100%;
   background-color: #393E46;
   border-radius: 0.5rem;
-}
-
-.skills {
-  padding: 0.3rem 0;
-}
-
-/* .frontend {
-    width: 80%;
-    background-color: #31f48e;
-}
-
-.backend {
-    width: 20%;
-    background-color: #0bbeff;
-}
-
-.react {
-    width: 60%;
-    background-color: #07aa7b;
-} 
-.agile{
-    width: 20%;
-    background-color: #0086ff;
-} */
-.scrum {
-  width: 78%;
-  background-color: #0086ff;
-}
-
-.gtd {
-  width: 90%;
-  background-color: #01437d;
-}
-
-.teamwork {
-  width: 90%;
-  background-color: #31f48e;
 }
 
 /* Modal CV img */

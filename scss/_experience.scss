@@ -1,6 +1,10 @@
 .experience {
     color: color(white);
-    padding: 12rem 7rem 0;
+    padding: 12rem 7rem;
+    padding-bottom: 10rem;
+    margin-top: 4rem;
+    position: relative;
+    background-color: rgba(color(secondary), .3);
     @include response(lg) {
             padding: 8rem 5rem 0;
         }
@@ -8,6 +12,45 @@
             padding: 5rem 3rem 0;
         }
 }
+/* SECTION DIVIDER */
+//TOP
+.custom-shape-divider-top-1669579363 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-top-1669579363 svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 107px;
+}
+.custom-shape-divider-top-1669579363 .shape-fill {
+    fill: color(primary);
+}
+//BOTTOM
+.custom-shape-divider-bottom-1669580180 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1669580180 svg {
+    position: relative;
+    display: block;
+    width: calc(184% + 1.3px);
+    height: 73px;
+}
+.custom-shape-divider-bottom-1669580180 .shape-fill {
+    fill: #181818;
+}
+/* EXPERIENCE */
 .exp{
     display: flex;
     align-items: flex-start;
@@ -131,34 +174,23 @@
         z-index: 1;
     }
 }
-
 .tooltip:hover .tooltip-text {
     visibility: visible;
 }
+/* SKILLS */
 .skills{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    @include response(xs){
-        flex-direction: column;
-    }
-    &-left{
-        width: 45%;
-        @include response(xs) {
-           width: 100%;
+    width: 80%;
+    margin: 10rem auto 0;
+        @include response(xs){
+            flex-direction: column;
         }
-    }
-    &-right{
-        width: 45%;
-        @include response(xs) {
-        width: 100%;
-        }
-    }
+
     &-title{
         @extend .text-undertitle;
         margin-top: 4rem;
     }
 }
+
 .skill-item{
 
     &-name{
@@ -172,41 +204,6 @@
     width: 100%;
     background-color: color(secondary);
     border-radius: .5rem;
-}
-
-.skills {
-    padding: .3rem 0;
-}
-
-/* .frontend {
-    width: 80%;
-    background-color: #31f48e;
-}
-
-.backend {
-    width: 20%;
-    background-color: #0bbeff;
-}
-
-.react {
-    width: 60%;
-    background-color: #07aa7b;
-} 
-.agile{
-    width: 20%;
-    background-color: #0086ff;
-} */ 
-.scrum{
-    width: 78%;
-    background-color: #0086ff;
-}
-.gtd{
-    width: 90%;
-    background-color: #01437d;
-}
-.teamwork{
-    width: 90%;
-    background-color: #31f48e;
 }
 
 /* Modal CV img */
