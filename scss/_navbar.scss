@@ -14,10 +14,10 @@
     justify-content: space-between;
 
     @include response(lg) {
-        padding: 0 5rem;
+        padding: 0 5rem !important;
     }
     @include response(xs) {
-        padding: 0 3rem;
+        padding: 0 3rem !important;
     }
         &-logo {
 

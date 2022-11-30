@@ -1,16 +1,16 @@
 .experience {
     color: color(white);
     padding: 12rem 7rem;
-    padding-bottom: 10rem;
     margin-top: 4rem;
     position: relative;
     background-color: rgba(color(secondary), .3);
-    @include response(lg) {
-            padding: 8rem 5rem 0;
-        }
-    @include response(lg) {
-            padding: 5rem 3rem 0;
-        }
+    @include response(xl) {
+        padding: 5rem 3rem 10rem;
+    }
+    @include response(sm) {
+        padding-top: 10rem;
+    }
+  
 }
 /* SECTION DIVIDER */
 //TOP

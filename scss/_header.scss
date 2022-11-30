@@ -8,46 +8,44 @@
     position: relative;
 
     &-text {
-       position: absolute;
-       bottom: 15rem;
-       right: 5rem;
-        @include response(xs){
-            right: 3rem;
+        position: absolute;
+        bottom: 0;
+       width: 100%;
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       justify-content:end;
+       align-items: flex-end;
+       padding: 0 7rem 7rem;
+        @include response(lg) {
+            padding: 0 5rem 5rem;
+        }    
+        @include response(xs) {
+            padding: 0 3rem 3rem;
         }
 
-        &-title {
-            font-size: size(xl) + 1;
-            font-family: $font-handlee;
-            text-align: right;
-            font-weight: 200;
-            user-select: none;
-            position: relative;
-            @include response(sm) {
-                font-size: size(xl)
-            }
-            @include response(xs) {
-                font-size: size(lg)
-            }
-        }
+        /* &-title {
+
+        } */
 
         &-name {
-            position: absolute;
-            bottom: 0;
-            right: 0;
+            text-align: right;
             font-size: size(xl) + 8;
             font-family: $font-baskerville;
             letter-spacing: .8rem;
             color: transparent;
             text-transform: uppercase;
+            position: relative;
+            user-select: none;
+
             &:hover span:nth-child(1) {
                     transform: translateY(-1rem);
                 }
             &:hover span:nth-child(2) {
-                transform: translateY(1rem);
+                
             }
             &:hover span:nth-child(3) {
-               opacity: 1;
-               transition: opacity .7s ease;
+               
             }
             & span:nth-child(1),
             & span:nth-child(2) {
@@ -80,6 +78,7 @@
                 text-align: center;
                 letter-spacing: 0.5rem;
                 word-spacing: 1rem;
+                padding-top: .3rem;
                 line-height: 120%;
                 @include response(md) {
                     font-size: size(md);
@@ -88,7 +87,7 @@
                     font-size: size(xs) - .4;
                 }
             }
-          
+            
             @include response(md) {
                 font-size: size(xl) + 6;
                 letter-spacing: 0.3rem;
@@ -109,16 +108,11 @@
 
 
 .main-links {
-    position: absolute;
-    bottom: 5rem;
-    right: 5rem;
     list-style-type: none;
     display: flex;
     @include response(xs) {
         right: 3rem;
         }
-
-    
     &-item {
         &-link {
             font-size: size(xl);
@@ -168,6 +162,67 @@
             
             &:active{
                color: color(pink);
+            }
+        }
+    }
+}
+
+/* HOVER NAME EFFECT */
+.header-text:hover span:nth-child(1){
+    transform: translateY(-1rem);
+}
+.header-text:hover span:nth-child(2){
+transform: translateY(1rem);
+}
+.header-text:hover span:nth-child(3){
+    transition: opacity .7s ease;
+    opacity: 1;
+}
+/* ANIMATION */
+.header-text-name span:nth-child(1){
+    @include response(lg) {
+        animation: topPart 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+
+        @keyframes topPart {
+            from {
+                transform: none;
+            }
+            to {
+                transform: translateY(-1rem);
+            }
+        }
+    }
+}
+.header-text-name span:nth-child(2){
+    @include response(lg) {
+        animation: bottomPart 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+
+        @keyframes bottomPart {
+            from {
+                transform: none;
+            }
+            to {
+                transform: translateY(1rem);
+            }
+        }
+    }
+}
+.header-text-name span:nth-child(3){
+    @include response(lg) {
+        animation: textAppear 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+
+        @keyframes textAppear {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
     }

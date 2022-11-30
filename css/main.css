@@ -16,12 +16,12 @@
 }
 @media (max-width: 980px) {
   .navbar {
-    padding: 0 5rem;
+    padding: 0 5rem !important;
   }
 }
 @media (max-width: 550px) {
   .navbar {
-    padding: 0 3rem;
+    padding: 0 3rem !important;
   }
 }
 .navbar-logo-link, .footer-logo-img {
@@ -149,51 +149,40 @@
 }
 .header-text {
   position: absolute;
-  bottom: 15rem;
-  right: 5rem;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: flex-end;
+  padding: 0 7rem 7rem;
+  /* &-title {
+
+  } */
+}
+@media (max-width: 980px) {
+  .header-text {
+    padding: 0 5rem 5rem;
+  }
 }
 @media (max-width: 550px) {
   .header-text {
-    right: 3rem;
-  }
-}
-.header-text-title {
-  font-size: 4rem;
-  font-family: "Handlee", cursive;
-  text-align: right;
-  font-weight: 200;
-  user-select: none;
-  position: relative;
-}
-@media (max-width: 640px) {
-  .header-text-title {
-    font-size: 3rem;
-  }
-}
-@media (max-width: 550px) {
-  .header-text-title {
-    font-size: 2.5rem;
+    padding: 0 3rem 3rem;
   }
 }
 .header-text-name {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  text-align: right;
   font-size: 11rem;
   font-family: "Baskervville", serif;
   letter-spacing: 0.8rem;
   color: transparent;
   text-transform: uppercase;
+  position: relative;
+  user-select: none;
 }
 .header-text-name:hover span:nth-child(1) {
   transform: translateY(-1rem);
-}
-.header-text-name:hover span:nth-child(2) {
-  transform: translateY(1rem);
-}
-.header-text-name:hover span:nth-child(3) {
-  opacity: 1;
-  transition: opacity 0.7s ease;
 }
 .header-text-name span:nth-child(1), .header-text-name span:nth-child(2) {
   position: absolute;
@@ -225,6 +214,7 @@
   text-align: center;
   letter-spacing: 0.5rem;
   word-spacing: 1rem;
+  padding-top: 0.3rem;
   line-height: 120%;
 }
 @media (max-width: 770px) {
@@ -258,9 +248,6 @@
 }
 
 .main-links {
-  position: absolute;
-  bottom: 5rem;
-  right: 5rem;
   list-style-type: none;
   display: flex;
 }
@@ -320,6 +307,69 @@
 }
 .mobile-list-item-link:active {
   color: #00ADB5;
+}
+
+/* HOVER NAME EFFECT */
+.header-text:hover span:nth-child(1) {
+  transform: translateY(-1rem);
+}
+
+.header-text:hover span:nth-child(2) {
+  transform: translateY(1rem);
+}
+
+.header-text:hover span:nth-child(3) {
+  transition: opacity 0.7s ease;
+  opacity: 1;
+}
+
+/* ANIMATION */
+@media (max-width: 980px) {
+  .header-text-name span:nth-child(1) {
+    animation: topPart 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+  @keyframes topPart {
+    from {
+      transform: none;
+    }
+    to {
+      transform: translateY(-1rem);
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .header-text-name span:nth-child(2) {
+    animation: bottomPart 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+  @keyframes bottomPart {
+    from {
+      transform: none;
+    }
+    to {
+      transform: translateY(1rem);
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .header-text-name span:nth-child(3) {
+    animation: textAppear 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+  }
+  @keyframes textAppear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 .about {
@@ -434,12 +484,12 @@
 
 .goals {
   grid-column: 2/-1;
-  margin-top: 3rem;
 }
 @media (max-width: 980px) {
   .goals {
     grid-row: 3/4;
     grid-column: 1/-1;
+    margin-top: 2rem;
   }
 }
 
@@ -522,19 +572,18 @@
 .experience {
   color: #EEEEEE;
   padding: 12rem 7rem;
-  padding-bottom: 10rem;
   margin-top: 4rem;
   position: relative;
   background-color: rgba(57, 62, 70, 0.3);
 }
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
   .experience {
-    padding: 8rem 5rem 0;
+    padding: 5rem 3rem 10rem;
   }
 }
-@media (max-width: 980px) {
+@media (max-width: 640px) {
   .experience {
-    padding: 5rem 3rem 0;
+    padding-top: 10rem;
   }
 }
 
@@ -1085,9 +1134,12 @@
     padding: 0.7rem 3rem;
   }
 }
-.footer-rights {
+.footer-right {
   text-align: center;
   font-size: 1.8rem;
+}
+.footer-right-text {
+  margin: 0;
 }
 
 #preloader {
