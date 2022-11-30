@@ -38,15 +38,6 @@
             position: relative;
             user-select: none;
 
-            &:hover span:nth-child(1) {
-                    transform: translateY(-1rem);
-                }
-            &:hover span:nth-child(2) {
-                
-            }
-            &:hover span:nth-child(3) {
-               
-            }
             & span:nth-child(1),
             & span:nth-child(2) {
                 position: absolute;
@@ -105,8 +96,6 @@
         }
     }
 }
-
-
 .main-links {
     list-style-type: none;
     display: flex;
@@ -172,7 +161,7 @@
     transform: translateY(-1rem);
 }
 .header-text:hover span:nth-child(2){
-transform: translateY(1rem);
+    transform: translateY(1rem);
 }
 .header-text:hover span:nth-child(3){
     transition: opacity .7s ease;
@@ -215,7 +204,7 @@ transform: translateY(1rem);
     @include response(lg) {
         animation: textAppear 2s;
         animation-fill-mode: forwards;
-        animation-delay: 2s;
+        animation-delay: 2s;    
 
         @keyframes textAppear {
             from {

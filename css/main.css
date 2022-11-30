@@ -181,9 +181,6 @@
   position: relative;
   user-select: none;
 }
-.header-text-name:hover span:nth-child(1) {
-  transform: translateY(-1rem);
-}
 .header-text-name span:nth-child(1), .header-text-name span:nth-child(2) {
   position: absolute;
   top: 0;
@@ -825,6 +822,7 @@
   color: #EEEEEE;
   font-size: 4rem;
   transition: all 0.2s;
+  z-index: 5;
 }
 .close:hover {
   color: #00ADB5;
