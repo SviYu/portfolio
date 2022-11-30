@@ -146,7 +146,7 @@
 
 }
 
-.tooltip {
+/* .tooltip {
     position: relative;
     text-decoration: none;
     color: color(white);
@@ -154,6 +154,8 @@
     font-size: size(md);
     transition: all .3s;
     text-shadow: .1rem .1rem color(pink);
+    opacity: 1 !important;
+    display: flex !important;
 
     &:hover {
         color: color(pink);
@@ -176,7 +178,7 @@
 }
 .tooltip:hover .tooltip-text {
     visibility: visible;
-}
+} */
 /* SKILLS */
 .skills{
     width: 80%;

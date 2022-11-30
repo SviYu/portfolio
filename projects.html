@@ -15,6 +15,10 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     <!-- css -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- JS -->
+    <script src="js/projects.js" defer></script>
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -46,81 +50,67 @@
 
     </nav>
     <!-- Header -->
-    <section class="projects-header" id="projectsHeader">
+  <!--   <section class="projects-header" id="projectsHeader">
 
-    </section>
+    </section> -->
     <!-- Main Projects -->
     <main class="projects" id="projects" data-aos="fade-up">
         <h3 class="projects-title">My Projects</h3>
-        <div class="project-wrapper">
-                    <div class="project">
-                            <img class="project-photo" src="https://source.unsplash.com/random/400x300" alt="project image">
-    
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="img/smuknu-project.jpg" alt="Smuknu Project">
+                    <div class="project-content">
+                        <p class="project-title">Smuknu</p>
+                        <p class="project-text">
+                            Project is made in React JS with fetching API.</p>
                         <div class="project-btns">
                             <div class="project-btn">
-                                <a class="project-btn-link" href="#">View project</a>
+                                <a class="project-btn-link" href="https://sviyu.github.io/smuknu" target="_blank">View project</a>
                             </div>
                             <div class="project-btn">
-                                <a class="project-btn-link" href="#">View code</a>
-                            </div>
-                        </div>
-                    </div> 
-                    
-                    <div class="project">
-                            <img class="project-photo" src="https://source.unsplash.com/random/300x300" alt="project image">
-    
-                        <div class="project-btns">
-                            <div class="project-btn">
-                                <a class="project-btn-link" href="#">View project</a>
+                                <a class="project-btn-link" href="https://github.com/SviYu/smuknu.git" target="_blank">View code</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project">
-                            <img class="project-photo" src="https://source.unsplash.com/random/300x400" alt="project image">
-    
-                        <div class="project-btns">
-                            <div class="project-btn">
-                                <a class="project-btn-link" href="#">View project</a>
-                            </div>
-                            <div class="project-btn">
-                                <a class="project-btn-link" href="#">View code</a>
-                            </div>
-                        </div>
-                    </div> 
-                    
-                    <div class="project">
-                            <img class="project-photo" src="https://source.unsplash.com/random/200x300" alt="project image">
-    
-                        <div class="project-btns">
-                            <div class="project-btn">
-                                <a class="project-btn-link" href="#">View project</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project">
-                            <img class="project-photo" src="https://source.unsplash.com/random/300x200" alt="project image">
-    
-                        <div class="project-btns">
-                            <div class="project-btn">
-                                <a class="project-btn-link" href="#">View project</a>
-                            </div>
-                            <div class="project-btn">
-                                <a class="project-btn-link" href="#">View code</a>
-                            </div>
-                        </div>
-                    </div> 
-                    
-                    <div class="project">
-                            <img class="project-photo" src="https://source.unsplash.com/random" alt="project image">
-    
-                        <div class="project-btns">
-                            <div class="project-btn">
-                                <a class="project-btn-link" href="#">View project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="img/podcast-project.jpg" alt="Podcast Project">
+                    <div class="project-content">
+                        <p class="project-title">Podcast</p>
+                        <p class="project-text">
+                            HTML, CSS, JS, Bootstrap, Swiper JS.</p>
+                        <div class="project-btns">
+                            <div class="project-btn">
+                                <a class="project-btn-link" href="https://sviyu.github.io/podcast/" target="_blank">View project</a>
+                            </div>
+                            <div class="project-btn">
+                                <a class="project-btn-link" href="https://github.com/SviYu/podcast.git" target="_blank">View code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide project">
+                    <img class="project-photo" src="img/creativity-project.jpg" alt="Creativity Project">
+                    <div class="project-content">
+                        <p class="project-title">The Creativity Project</p>
+                        <p class="project-text">
+                            Coming soon...</p>
+                        <div class="project-btns">
+                            <div class="project-btn">
+                                <a class="project-btn-link" href="#">View project</a>
+                            </div>
+                            <div class="project-btn">
+                                <a class="project-btn-link" href="#">View code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    
     </main>
     
     <!-- Footer -->
@@ -130,13 +120,34 @@
                 <img class="footer-logo-img" src="img/Logo.svg" alt="portfolio logo" />
             </a>
         </div>
-    
-        <div class="footer-rights">
+        <div class="footer-right">
             <p class="footer-right-text">®2022 All By Myself</p>
         </div>
     </footer>
     <!-- End of Footer -->
-    <script src="js/projects.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            grabCursor: true,
+            effect: "creative",
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: [0, 0, -400],
+                },
+                next: {
+                    translate: ["100%", 0, 0],
+                },
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
+    <!-- AOS -->
     <script>
         AOS.init({
             duration: 1800,

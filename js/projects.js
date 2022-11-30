@@ -1,5 +1,5 @@
-/* Scrolling animation */
-window.onscroll = function() { myFunction() };
+//Scrolling animation
+/* window.onscroll = function() { myFunction() };
 
 function myFunction() {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -7,9 +7,11 @@ function myFunction() {
     let scrolled = (winScroll / height) * 100;
     document.getElementById('myBar').style.width = scrolled + '%'
 }
-
-/* Preloader */
+ */
+//Preloader
 let loader = document.getElementById('preloader');
 window.addEventListener('load', () => {
     loader.style.display = 'none'
 })
+
+
