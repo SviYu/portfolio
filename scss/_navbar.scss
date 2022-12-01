@@ -10,6 +10,7 @@
     top: 0;
     z-index: 5;
     display: flex;
+    flex-wrap: nowrap !important;
     align-items: center;
     justify-content: space-between;
 
@@ -20,18 +21,17 @@
         padding: 0 3rem !important;
     }
         &-logo {
-
+                /* margin-top: -1rem; */
             &-link {
-                height: 60px;
-                padding: 0;
+                height: 9rem;
             }
         }
    
 }
 .menu-list{
     list-style: none;
-    margin-bottom: 0;
     display: flex;
+    margin: 0;
     @include response(md) {
         display: none;
     }

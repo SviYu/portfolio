@@ -15,6 +15,10 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     <!-- css -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- js -->
+    <script src="https://cdn.lordicon.com/qjzruarw.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+    <script src="js/script.js" defer></script>
     <!-- aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -39,7 +43,7 @@
         <!-- Navbar -->
         <nav class="navbar">
             <a class="navbar-logo" href="#header">
-                <img class="navbar-logo-link" src="img/Logo.svg" alt="portfolio logo" />
+                <img class="navbar-logo-link" src="img/Logo-top.svg" alt="portfolio logo" />
             </a>
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
@@ -161,8 +165,7 @@
                 <div class="exp-left">
                     <h3 class="exp-left-title ">Experience & Skills</h3>
                     <p class="text-description">I am a freelancer and during tha last year I have done some different
-                        projects, you can see in my <a class="" href="projects.html">Projects <span class="tooltip-text">View
-                                Projects &#128218</span></a> section. Due
+                        projects, you can see in my <a class="project-link" href="projects.html">Projects&#128218</a> section. Due
                         to this I am good at core technical skills, organisational ethics and discipline.</p>
                     <p class="text-description">Also I have worked in Danish web-bureau, called Zellert for one year, as
                         a designer and a developer. I worked mostly
@@ -171,20 +174,22 @@
                 </div>
                 <div class="exp-right" data-aos="fade-up">
                     <div class="cv">
-                        <img class="cv-bgPhoto" src="img/ResumeImg.jpg" alt="cv photo">
+                        
+                        <div><lottie-player src="https://lottie.host/3ddb0dfa-8972-469f-b71d-ac2e1f150569/DgAw7QytHO.json" background="transparent"
+                            speed=".5" style="width: 300px; height: 300px;" loop autoplay></lottie-player></div>
                     
                         <div class="cv-btns">
                             <div class="cv-btn">
-                                <a class="cv-button view" href="#experience">View</a>
+                                <a class="cv-button view" href="#experience">View CV</a>
                             </div>
                             <div class="cv-btn">
-                                <a class="cv-button" href="assets/Resume.pdf" target="_blank">Open</a>
+                                <a class="cv-button" href="assets/Resume.pdf" target="_blank">Open CV</a>
                             </div>
                         </div>
                     </div>
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
-                        <img class="modal-content" id="img01">
+                        <img class="modal-content" id="img01" src="img/ResumeImg.jpg">
                         <span class="close">&times;</span>
                     </div>
                 </div>
@@ -306,7 +311,7 @@
     <footer class="footer">
         <div class="footer-logo">
             <a href="#header">
-                <img class="footer-logo-img" src="img/Logo.svg" alt="portfolio logo" />
+                <img class="footer-logo-img" src="img/Logo-bottom.svg" alt="portfolio logo" />
             </a>
         </div>
        
@@ -316,9 +321,6 @@
     </footer>
     <!-- End of Footer -->
     
-
-        <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
-        <script src="js/script.js"></script>
         <script>
             AOS.init({
                 duration: 1800,

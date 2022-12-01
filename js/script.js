@@ -12,11 +12,9 @@ function myFunction() {
 let modal = document.getElementById('myModal');
 let imgView = document.querySelector('.view');
 let modalImg = document.getElementById('img01');
-let cvImg = document.querySelector('.cv-bgPhoto');
 
 imgView.onclick = function () {
     modal.style.display = 'block';
-    modalImg.src = cvImg.src;
 }
 let close = document.getElementsByClassName('close')[0];
 close.onclick = function () {

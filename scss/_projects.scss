@@ -18,6 +18,8 @@
     &-title{
         @extend .text-title;
         color: color(white);
+        text-align: center;
+        margin-bottom: 5rem;
     }
 }
 
@@ -29,7 +31,7 @@
     font-size: size(sm);
     font-family: $font-openSans;
     color: #fff;
-    background-color: rgba(color(secondary), .9);
+    background-color: rgba(color(darkpink), .95);
     
     &-photo{
         width: 70%;
@@ -145,11 +147,15 @@
     width: 90%;
     height: 60vh;
 }
-
 .swiper-pagination-progressbar.swiper-pagination-horizontal {
     bottom: 0 !important;
 }
+.swiper-pagination-bullet  {
+    background-color: color(pink) !important;
+}
 
-.swiper-pagination-bullet-active {
-    background-color: color(white) !important;
+/* disabled links */
+a.disabled{
+    pointer-events: none;
+    cursor: default;
 }
