@@ -9,7 +9,7 @@ function myFunction() {
 }
 
 /* Modal CV */
-/* let modal = document.getElementById('myModal');
+let modal = document.getElementById('myModal');
 let imgView = document.querySelector('.view');
 let modalImg = document.getElementById('img01');
 
@@ -19,7 +19,7 @@ imgView.onclick = function () {
 let close = document.getElementsByClassName('close')[0];
 close.onclick = function () {
     modal.style.display = 'none';
-} */
+}
 
 /* Burger menu animation */
 const burgerMenu = document.getElementById('burgerMenu');

@@ -675,12 +675,14 @@
   width: auto;
   height: 30rem;
   object-fit: contain;
-  filter: blur(0.3rem);
+  filter: blur(0.2rem);
+  transition: filter 0.2s;
+  transition: transform 0.5s;
 }
-@media (max-width: 550px) {
-  .cv-image {
-    filter: blur(0.2rem);
-  }
+.cv-image:hover {
+  cursor: zoom-in;
+  filter: blur(0);
+  transform: scale(1.5);
 }
 .cv-btn {
   margin-top: 2rem;

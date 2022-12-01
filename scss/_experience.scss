@@ -93,14 +93,16 @@
         width: auto;
         height: 30rem;
         object-fit:contain;
-        filter: blur(.3rem);
+        filter: blur(.2rem);
+        transition: filter .2s;
+        transition: transform .5s;
 
         &:hover{
-           
+           cursor:zoom-in;
+           filter: blur(0);
+           transform: scale(1.5);
         }
-        @include response(xs){
-            filter: blur(.2rem)
-        }
+
     }
     &-btn{
         margin-top: 2rem;
