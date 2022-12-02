@@ -588,47 +588,41 @@
 }
 
 /* SECTION DIVIDER */
-.custom-shape-divider-top-1669579363 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+/* .custom-shape-divider-top-1669579363 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
 }
-
 .custom-shape-divider-top-1669579363 svg {
-  position: relative;
-  display: block;
-  width: calc(123% + 1.3px);
-  height: 107px;
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 107px;
 }
-
 .custom-shape-divider-top-1669579363 .shape-fill {
-  fill: #181818;
+    fill: color(primary);
+} */
+/* .custom-shape-divider-bottom-1669580180 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
 }
-
-.custom-shape-divider-bottom-1669580180 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
 .custom-shape-divider-bottom-1669580180 svg {
-  position: relative;
-  display: block;
-  width: calc(184% + 1.3px);
-  height: 73px;
+    position: relative;
+    display: block;
+    width: calc(184% + 1.3px);
+    height: 73px;
 }
-
 .custom-shape-divider-bottom-1669580180 .shape-fill {
-  fill: #181818;
-}
-
+    fill: #181818;
+} */
 /* EXPERIENCE */
 .exp {
   display: flex;
@@ -683,6 +677,11 @@
   cursor: zoom-in;
   filter: blur(0);
   transform: scale(1.5);
+}
+@media (max-width: 770px) {
+  .cv-image:hover {
+    transform: none;
+  }
 }
 .cv-btn {
   margin-top: 2rem;
