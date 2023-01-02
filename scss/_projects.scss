@@ -140,6 +140,7 @@
         color: color(white);
         font-size: size(xs) - .1;
         position: relative;
+        cursor: pointer;
         &:hover{
             color: color(pink);
         }

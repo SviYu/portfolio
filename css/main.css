@@ -977,6 +977,7 @@
   color: #EEEEEE;
   font-size: 1.5rem;
   position: relative;
+  cursor: pointer;
 }
 .project-btn-link:hover {
   color: #00ADB5;
